@@ -1,24 +1,26 @@
-public class selectionsort {
+public class insertionsort {
     public static void main(String[] args) {
-        int[] nums = { 6,5,2,8,3,7};
+        int[] nums = {3, 6, 2, 1, 5};
         sorting(nums);
     }
     public static void sorting(int [] nums) {
-        int minindex = 0;
+
         System.out.println("Before soring");
         for(int val : nums) {
             System.out.print(val + " ");
         }
-        for(int i=0;i<nums.length-1;i++) {
-            minindex = i;
-            for(int j=i+1;j< nums.length;j++) {
-                if(nums[minindex] > nums[j])
-                    minindex = j;
+
+        int key = 0, j = 0;
+        for(int i=0;i<nums.length;i++) {
+            key = nums[i];
+            j = i-1;
+            while (j >= 0 && nums[j] > key) {
+                nums[j+1] = nums[j];
+                j--;
             }
-            int temp = nums[minindex];
-            nums[minindex] = nums[i];
-            nums[i] = temp;
+            nums[j+1] = key;
         }
+
         System.out.println("\nAfter soring");
         for(int val : nums) {
             System.out.print(val + " ");

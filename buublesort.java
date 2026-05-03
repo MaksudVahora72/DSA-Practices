@@ -1,4 +1,4 @@
-public class program3 {
+public class buublesort {
     public static void main(String[] args) {
         buublesort();
     }
