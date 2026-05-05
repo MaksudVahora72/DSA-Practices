@@ -42,11 +42,6 @@ class Linkedlistopt {
             return;
         }
 
-        if(position < 0) {
-            System.out.println("Invalid position");
-            return;
-        }
-
         if (position == 0) {
             head = head.next;
             return;
