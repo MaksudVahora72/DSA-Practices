@@ -1,4 +1,4 @@
-public class program2 {
+public class linearbinary {
 
     public static void main(String[] args) {
 
